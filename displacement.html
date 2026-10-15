@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>(dis)placement: tech, us &amp; unseen — Minglu Zhong</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2317181A'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='40' fill='%23FAF9F7' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+:root{--paper:#FAF9F7;--ink:#17181A;--ink-soft:#55565B;--line:#E2DFD8;--line-strong:#C9C5BC;--accent:#254358;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans SC",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;font-weight:300;line-height:1.9;-webkit-font-smoothing:antialiased;}
+.serif{font-family:"Noto Serif SC",Georgia,"Songti SC",serif;}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(250,249,247,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:19px;letter-spacing:.02em;color:var(--ink);text-decoration:none;}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{color:var(--ink-soft);text-decoration:none;font-size:14px;letter-spacing:.06em;transition:color .2s;}
+.nav-links a:hover{color:var(--accent);}
+
+.head{padding:150px 28px 0;text-align:center;}
+.head .num{font-family:Georgia,serif;font-size:13px;letter-spacing:.28em;color:var(--accent);}
+.head .sub-of{font-size:12.5px;color:var(--ink-soft);letter-spacing:.2em;margin-top:8px;}
+.head h1{font-family:"Noto Serif SC",Georgia,serif;font-weight:900;font-size:clamp(30px,4.6vw,46px);letter-spacing:.03em;margin-top:12px;}
+.head .zh-title{display:block;font-family:"Noto Serif SC",serif;font-weight:600;font-size:17px;color:var(--ink-soft);margin-top:10px;letter-spacing:.1em;}
+.head .meta{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 26px;margin-top:26px;font-size:13.5px;color:var(--ink-soft);letter-spacing:.1em;}
+.head .meta b{color:var(--ink);font-weight:500;}
+.rule{border:none;border-top:1px solid var(--ink);max-width:1200px;margin:40px auto 0;}
+
+.body{max-width:900px;margin:0 auto;padding:48px 28px 30px;}
+.body p{margin-bottom:20px;font-size:15.5px;max-width:680px;margin-left:auto;margin-right:auto;}
+.body p.lead{font-size:16.5px;}
+.body .serif{font-weight:600;}
+.body h2{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:21px;letter-spacing:.06em;margin:44px 0 16px;border-left:3px solid var(--accent);padding-left:14px;max-width:680px;margin-left:auto;margin-right:auto;}
+.fig{max-width:900px;margin:36px auto;text-align:center;}
+.fig img{width:100%;height:auto;display:block;border:1px solid var(--line);}
+.fig figcaption{margin-top:10px;font-size:12.5px;color:var(--ink-soft);letter-spacing:.05em;}
+.info-block{max-width:680px;margin:26px auto;font-size:15px;}
+.info-block .row{display:flex;gap:14px;padding:11px 0;border-bottom:1px dashed var(--line);}
+.info-block .row b{flex:0 0 150px;font-weight:600;color:var(--ink);}
+.info-block .row span{flex:1;color:var(--ink-soft);}
+
+.footer{border-top:1px solid var(--line);background:#F4F2ED;margin-top:70px;}
+.footer-inner{max-width:1200px;margin:0 auto;padding:36px 28px 44px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer .name{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:16px;}
+.footer .mail{color:var(--ink-soft);text-decoration:none;font-size:14px;}
+.footer .mail:hover{color:var(--accent);}
+.footer .back a{color:var(--ink-soft);text-decoration:none;font-size:13.5px;}
+.footer .back a:hover{color:var(--accent);}
+
+@media (max-width:760px){
+  .head{padding:120px 20px 0;}
+  .body{padding:40px 20px 20px;}
+  .nav-inner{padding:12px 20px;}
+  .footer-inner{padding:30px 20px 38px;}
+  .head .meta{font-size:12.5px;gap:8px 18px;}
+  .info-block .row{flex-direction:column;gap:4px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Minglu Zhong</a>
+    <div class="nav-links">
+      <a href="index.html">作品</a>
+      <a href="about.html">关于</a>
+    </div>
+  </div>
+</nav>
+
+<header class="head">
+  <span class="num">PROJECT 04 · PROGRAM</span>
+  <p class="sub-of">Your Pixel Echo 关联公共项目 — 闭幕座谈</p>
+  <h1>(dis)placement: tech, us &amp; unseen<span class="zh-title">《失位：技术、我们与不可见》· 讨论座谈</span></h1>
+  <div class="meta">
+    <span><b>时间</b> 2024 年 4 月 21 日（周日）4–7 pm</span>
+    <span><b>地点</b> Gallery CA, 440 E Oliver St, Baltimore</span>
+  </div>
+</header>
+<hr class="rule">
+
+<main class="body">
+  <p class="lead">我们荣幸地宣布这场讨论座谈：嘉宾包括 JHU 电影与媒体研究系的 <span class="serif">Prof. Stine</span>、陶森大学电子媒体与电影系主任 <span class="serif">Prof. Murray</span>，以及展览策展人 <span class="serif">Minglu Zhong</span>。座谈将涵盖视频艺术与数字艺术理论、互联网文化、技术发展对艺术家的影响，以及 AI 与 NFT 给当代艺术、动画与娱乐等不同艺术行业带来的变化，也包括新兴的混合类型。</p>
+
+  <figure class="fig">
+    <img src="assets/displacement-01.jpg" alt="三位座谈嘉宾围坐交流">
+    <figcaption>(dis)placement — 座谈现场</figcaption>
+  </figure>
+
+  <h2>关于 Prof. Kyle Stine</h2>
+  <p>来自 JHU 的 Kyle Stine 教授研究聚焦电影史、媒介理论以及科学与技术研究。他的专业领域包括播客、计算机动画、互联网文化与区块链技术等新媒体。</p>
+
+  <h2>关于 Prof. Ryan Murray</h2>
+  <p>Ryan Murray 教授现任电子媒体与电影系主任。他讲授涵盖虚拟现实、沉浸式媒介、实验电影、视频艺术、网络视频、视频剪辑与创意的课程。他也是一位艺术家，其艺术实践通过反思流行文化媒介与技术、将普通对象与经验重新想象为迷幻的细腻表达，探索意义的追寻。</p>
+
+  <h2>座谈议题</h2>
+  <div class="info-block">
+    <div class="row"><b>视频艺术与数字艺术理论</b><span>媒介理论 · 电影史 · 新媒体研究</span></div>
+    <div class="row"><b>互联网文化</b><span>网络亚文化 · 粉丝文化 · 数字社群</span></div>
+    <div class="row"><b>技术对艺术家的影响</b><span>创作工具演变 · 艺术生产的新条件</span></div>
+    <div class="row"><b>AI 与 NFT 对艺术行业的变化</b><span>当代艺术 · 动画 · 娱乐 · 新兴混合类型</span></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="name">Minglu Zhong 钟明璐</span>
+    <a class="mail" href="mailto:Muke_Zhong@163.com">Muke_Zhong@163.com</a>
+    <span class="back"><a href="index.html">返回首页 ↑</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

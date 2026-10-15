@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Niche to Mainstream — Minglu Zhong</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2317181A'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='40' fill='%23FAF9F7' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+:root{--paper:#FAF9F7;--ink:#17181A;--ink-soft:#55565B;--line:#E2DFD8;--line-strong:#C9C5BC;--accent:#254358;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans SC",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;font-weight:300;line-height:1.9;-webkit-font-smoothing:antialiased;}
+.serif{font-family:"Noto Serif SC",Georgia,"Songti SC",serif;}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(250,249,247,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:19px;letter-spacing:.02em;color:var(--ink);text-decoration:none;}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{color:var(--ink-soft);text-decoration:none;font-size:14px;letter-spacing:.06em;transition:color .2s;}
+.nav-links a:hover{color:var(--accent);}
+
+.head{padding:150px 28px 0;text-align:center;}
+.head .num{font-family:Georgia,serif;font-size:13px;letter-spacing:.28em;color:var(--accent);}
+.head h1{font-family:"Noto Serif SC",Georgia,serif;font-weight:900;font-size:clamp(28px,4.2vw,42px);letter-spacing:.03em;margin-top:12px;}
+.head .zh-title{display:block;font-family:"Noto Serif SC",serif;font-weight:600;font-size:17px;color:var(--ink-soft);margin-top:10px;letter-spacing:.1em;}
+.head .meta{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 26px;margin-top:26px;font-size:13.5px;color:var(--ink-soft);letter-spacing:.1em;}
+.head .meta b{color:var(--ink);font-weight:500;}
+.rule{border:none;border-top:1px solid var(--ink);max-width:1200px;margin:40px auto 0;}
+
+.body{max-width:900px;margin:0 auto;padding:48px 28px 30px;}
+.body p{margin-bottom:20px;font-size:15.5px;max-width:680px;margin-left:auto;margin-right:auto;}
+.body p.lead{font-size:16.5px;}
+.body .serif{font-weight:600;}
+.body h2{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:21px;letter-spacing:.06em;margin:44px 0 16px;border-left:3px solid var(--accent);padding-left:14px;max-width:680px;margin-left:auto;margin-right:auto;}
+.fig{max-width:900px;margin:36px auto;text-align:center;}
+.fig img{width:100%;height:auto;display:block;border:1px solid var(--line);}
+.fig figcaption{margin-top:10px;font-size:12.5px;color:var(--ink-soft);letter-spacing:.05em;}
+.fig-grid{max-width:900px;margin:36px auto;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.fig-grid img{width:100%;height:auto;display:block;border:1px solid var(--line);}
+.fig-grid figcaption{grid-column:1/-1;text-align:center;margin-top:8px;font-size:12.5px;color:var(--ink-soft);letter-spacing:.05em;}
+.quote{max-width:680px;margin:30px auto;padding:20px 26px;border-left:3px solid var(--ink);background:#F2F0EB;font-size:14.5px;color:var(--ink-soft);}
+.quote .who{display:block;margin-top:10px;font-family:"Noto Serif SC",serif;font-weight:600;color:var(--ink);font-size:13px;letter-spacing:.06em;}
+.info-block{max-width:680px;margin:26px auto;font-size:15px;}
+.info-block .row{display:flex;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line);}
+.info-block .row b{flex:0 0 130px;font-weight:500;color:var(--ink-soft);}
+.info-block .row span{flex:1;}
+
+.footer{border-top:1px solid var(--line);background:#F4F2ED;margin-top:70px;}
+.footer-inner{max-width:1200px;margin:0 auto;padding:36px 28px 44px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer .name{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:16px;}
+.footer .mail{color:var(--ink-soft);text-decoration:none;font-size:14px;}
+.footer .mail:hover{color:var(--accent);}
+.footer .back a{color:var(--ink-soft);text-decoration:none;font-size:13.5px;}
+.footer .back a:hover{color:var(--accent);}
+
+@media (max-width:760px){
+  .head{padding:120px 20px 0;}
+  .body{padding:40px 20px 20px;}
+  .nav-inner{padding:12px 20px;}
+  .footer-inner{padding:30px 20px 38px;}
+  .head .meta{font-size:12.5px;gap:8px 18px;}
+  .fig-grid{grid-template-columns:1fr;}
+  .info-block .row{flex-direction:column;gap:4px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Minglu Zhong</a>
+    <div class="nav-links">
+      <a href="index.html">作品</a>
+      <a href="about.html">关于</a>
+    </div>
+  </div>
+</nav>
+
+<header class="head">
+  <span class="num">PROJECT 11 · LECTURE</span>
+  <h1>From Niche to Mainstream<span class="zh-title">《从亚文化到主流：动漫展文化的神圣化》· 学术讲座</span></h1>
+  <div class="meta">
+    <span><b>时间</b> 2023 年 4 月 8 日（周一）4–5 pm</span>
+    <span><b>地点</b> SNF Parkway Theatre, 5 W. North Avenue, Baltimore</span>
+  </div>
+</header>
+<hr class="rule">
+
+<main class="body">
+  <p class="lead">这是一场关于动漫展（Comic-Con）文化如何从亚文化走向主流的讲座座谈，探讨这一粉丝崇拜现象——它已在国际上达到临界规模。我们与陶森大学社会学教授 <span class="serif">Michael A. Elliott</span> 一同深入探讨粉丝在人们生活中的作用，以及人们为何成为某一流行文化类型的忠实粉丝。活动还包括两场短片放映（共 25 分钟），呈现艺术家 <span class="serif">AA Cheng</span> 与 <span class="serif">Skawennati</span> 的作品。</p>
+
+  <figure class="fig">
+    <img src="assets/niche-01.jpg" alt="讲座现场，主讲人站在讲台旁">
+    <figcaption>讲座现场 — 主讲人与听众</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="assets/niche-02.jpg" alt="放映厅内观众观看投影">
+    <figcaption>电影放映 — 观众席</figcaption>
+  </figure>
+  <figure class="fig-grid">
+    <img src="assets/niche-03.jpg" alt="主讲人身后屏幕上显示INTERVIEW THEMES">
+    <img src="assets/niche-04.jpg" alt="投影屏幕上的讲稿内容">
+    <figcaption>讲座进行中 — 屏幕与演讲</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="assets/niche-05.jpg" alt="放映厅内观众观看影片">
+    <figcaption>TimeTraveller™ 放映现场</figcaption>
+  </figure>
+
+  <h2>关于 Prof. Michael A. Elliott</h2>
+  <p>Michael Elliott 教授将他的热情融入全球化课堂，在社会学与人类学领域激发学生参与。他的研究聚焦"书呆子文化"（nerd culture），检视这些社群中的强烈投入与社会动态。超越娱乐层面，他的工作探讨神圣意义如何在全球世俗语境中浮现，强调当代社会中塑造意义、目的与社会纽带（尤其在粉丝社群里）的多元体验。</p>
+
+  <h2>关于《I See Myself a Monster》</h2>
+  <div class="quote">
+    “当心灵根植于网络世界，物理对象失去其精神价值与意义。一切——包括自己——都可以被轻易解构。我通过自我解构探索内在价值，但结果不可避免地是一只拼合的造物，如同嵌合体一般。”
+    <span class="who">— AA Cheng · 2023 · 3 分 42 秒</span>
+  </div>
+
+  <h2>关于《TimeTraveller™》</h2>
+  <p><span class="serif">TimeTraveller™</span> 是一个跨平台项目，包含一部九集的 machinima 系列。该系列讲述了 22 世纪年轻莫霍克人 Hunter 的赛博朋克旅程：他通过深入过去来寻求对未来的洞见。尽管拥有强大的传统战士技能，Hunter 在一个过度人口、过度消费与技术弥漫的世界中感到漂泊。出于紧迫感，他借助教育娱乐工具 TimeTraveller™ 重新连接传统，希望找到人生目标。他沉浸于与第一民族及美洲原住民相关的关键历史事件，包括达科他苏族起义（1852）、奥卡危机（1990）与恶魔岛占领（1969）。旅途中，他遇到了当代莫霍克女性 Karahkwenhawi——由于一个奇特的系统故障，她也能使用 TimeTraveller™ 眼镜。</p>
+
+  <h2>活动日程</h2>
+  <div class="info-block">
+    <div class="row"><b>16:00 – 16:10</b><span>开场介绍 Introduction</span></div>
+    <div class="row"><b>16:10 – 16:15</b><span>放映《I See Myself a Monster》— AA Cheng</span></div>
+    <div class="row"><b>16:15 – 16:35</b><span>讲座 — Prof. Michael A. Elliott</span></div>
+    <div class="row"><b>16:35 – 16:55</b><span>放映《TimeTraveller™》— 艺术家 Skawennati</span></div>
+    <div class="row"><b>16:55 – 17:00</b><span>问答环节 Q&amp;A</span></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="name">Minglu Zhong 钟明璐</span>
+    <a class="mail" href="mailto:Muke_Zhong@163.com">Muke_Zhong@163.com</a>
+    <span class="back"><a href="index.html">返回首页 ↑</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

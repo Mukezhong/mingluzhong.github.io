@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phantom Images on the Ruins — Minglu Zhong</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2317181A'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='40' fill='%23FAF9F7' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+:root{--paper:#FAF9F7;--ink:#17181A;--ink-soft:#55565B;--line:#E2DFD8;--line-strong:#C9C5BC;--accent:#254358;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans SC",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;font-weight:300;line-height:1.9;-webkit-font-smoothing:antialiased;}
+.serif{font-family:"Noto Serif SC",Georgia,"Songti SC",serif;}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(250,249,247,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:19px;letter-spacing:.02em;color:var(--ink);text-decoration:none;}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{color:var(--ink-soft);text-decoration:none;font-size:14px;letter-spacing:.06em;transition:color .2s;}
+.nav-links a:hover{color:var(--accent);}
+
+.head{padding:150px 28px 0;text-align:center;}
+.head .num{font-family:Georgia,serif;font-size:13px;letter-spacing:.28em;color:var(--accent);}
+.head h1{font-family:"Noto Serif SC",Georgia,serif;font-weight:900;font-size:clamp(30px,4.6vw,46px);letter-spacing:.03em;margin-top:12px;}
+.head .zh-title{display:block;font-family:"Noto Serif SC",serif;font-weight:600;font-size:17px;color:var(--ink-soft);margin-top:10px;letter-spacing:.1em;}
+.head .meta{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 26px;margin-top:26px;font-size:13.5px;color:var(--ink-soft);letter-spacing:.1em;}
+.head .meta b{color:var(--ink);font-weight:500;}
+.rule{border:none;border-top:1px solid var(--ink);max-width:1200px;margin:40px auto 0;}
+
+.body{max-width:900px;margin:0 auto;padding:48px 28px 30px;}
+.body p{margin-bottom:20px;font-size:15.5px;max-width:680px;margin-left:auto;margin-right:auto;}
+.body p.lead{font-size:16.5px;}
+.body .serif{font-weight:600;}
+.body h2{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:21px;letter-spacing:.06em;margin:44px 0 16px;border-left:3px solid var(--accent);padding-left:14px;max-width:680px;margin-left:auto;margin-right:auto;}
+.fig{max-width:900px;margin:36px auto;text-align:center;}
+.fig img{width:100%;height:auto;display:block;border:1px solid var(--line);}
+.fig figcaption{margin-top:10px;font-size:12.5px;color:var(--ink-soft);letter-spacing:.05em;}
+.fig-grid{max-width:900px;margin:36px auto;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.fig-grid img{width:100%;height:auto;display:block;border:1px solid var(--line);}
+.fig-grid figcaption{grid-column:1/-1;text-align:center;margin-top:8px;font-size:12.5px;color:var(--ink-soft);letter-spacing:.05em;}
+
+.footer{border-top:1px solid var(--line);background:#F4F2ED;margin-top:70px;}
+.footer-inner{max-width:1200px;margin:0 auto;padding:36px 28px 44px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer .name{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:16px;}
+.footer .mail{color:var(--ink-soft);text-decoration:none;font-size:14px;}
+.footer .mail:hover{color:var(--accent);}
+.footer .back a{color:var(--ink-soft);text-decoration:none;font-size:13.5px;}
+.footer .back a:hover{color:var(--accent);}
+
+@media (max-width:760px){
+  .head{padding:120px 20px 0;}
+  .body{padding:40px 20px 20px;}
+  .nav-inner{padding:12px 20px;}
+  .footer-inner{padding:30px 20px 38px;}
+  .head .meta{font-size:12.5px;gap:8px 18px;}
+  .fig-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Minglu Zhong</a>
+    <div class="nav-links">
+      <a href="index.html">作品</a>
+      <a href="about.html">关于</a>
+    </div>
+  </div>
+</nav>
+
+<header class="head">
+  <span class="num">PROJECT 10</span>
+  <h1>Phantom Images on the Ruins<span class="zh-title">《废墟上的幻影图像》· 个人装置</span></h1>
+  <div class="meta">
+    <span><b>年份</b> 2024</span>
+    <span><b>类型</b> 装置 Installation</span>
+    <span><b>角色</b> 艺术家 Artist</span>
+  </div>
+</header>
+<hr class="rule">
+
+<main class="body">
+  <p class="lead"><span class="serif">Phantom Images on the Ruins</span> 是一件以数字影像为媒介的装置作品：由多块方形数字影像模块拼接而成的墙面，以蓝黑为主的色调呈现出故障艺术、数据纹理与科技感的视觉。模块排布错落有致，部分位置留有空白，如同记忆与废墟上残留的幻影。</p>
+
+  <figure class="fig">
+    <img src="assets/phantom-01.png" alt="白墙上由多块方形数字影像模块拼接而成的装置">
+    <figcaption>Phantom Images on the Ruins — 墙面装置全景</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="assets/phantom-02.jpg" alt="三位观众在白墙前观赏作品">
+    <figcaption>观众驻足 — 装置与观者</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="assets/phantom-03.jpg" alt="展厅中多组作品：小幅画作、方形拼贴与几何装置">
+    <figcaption>展览现场 — 拼贴与装置并置</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="assets/phantom-04.jpg" alt="拱形展厅中观众观看摄影与影像作品">
+    <figcaption>展厅环境 — 影像序列</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="assets/phantom-05.jpg" alt="男子背身观看深色方形拼接装置">
+    <figcaption>观者与装置 — 近距离凝视</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="assets/phantom-06.jpg" alt="年轻女性拍摄墙面拼接装置">
+    <figcaption>互动时刻 — 观众记录作品</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="assets/phantom-07.jpg" alt="白色墙面上黑色纹理板块拼接的装置特写">
+    <figcaption>细节 — 方形模块与标签</figcaption>
+  </figure>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="name">Minglu Zhong 钟明璐</span>
+    <a class="mail" href="mailto:Muke_Zhong@163.com">Muke_Zhong@163.com</a>
+    <span class="back"><a href="index.html">返回首页 ↑</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

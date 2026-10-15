@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>“Serene Flow” — Minglu Zhong</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2317181A'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='40' fill='%23FAF9F7' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+:root{--paper:#FAF9F7;--ink:#17181A;--ink-soft:#55565B;--line:#E2DFD8;--line-strong:#C9C5BC;--accent:#254358;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans SC",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;font-weight:300;line-height:1.9;-webkit-font-smoothing:antialiased;}
+.serif{font-family:"Noto Serif SC",Georgia,"Songti SC",serif;}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(250,249,247,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:19px;letter-spacing:.02em;color:var(--ink);text-decoration:none;}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{color:var(--ink-soft);text-decoration:none;font-size:14px;letter-spacing:.06em;transition:color .2s;}
+.nav-links a:hover{color:var(--accent);}
+
+.head{padding:150px 28px 0;text-align:center;}
+.head .num{font-family:Georgia,serif;font-size:13px;letter-spacing:.28em;color:var(--accent);}
+.head .sub-of{font-size:12.5px;color:var(--ink-soft);letter-spacing:.2em;margin-top:8px;}
+.head h1{font-family:"Noto Serif SC",Georgia,serif;font-weight:900;font-size:clamp(30px,4.6vw,46px);letter-spacing:.03em;margin-top:12px;}
+.head .zh-title{display:block;font-family:"Noto Serif SC",serif;font-weight:600;font-size:17px;color:var(--ink-soft);margin-top:10px;letter-spacing:.1em;}
+.head .meta{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 26px;margin-top:26px;font-size:13.5px;color:var(--ink-soft);letter-spacing:.1em;}
+.head .meta b{color:var(--ink);font-weight:500;}
+.rule{border:none;border-top:1px solid var(--ink);max-width:1200px;margin:40px auto 0;}
+
+.body{max-width:900px;margin:0 auto;padding:48px 28px 30px;}
+.body p{margin-bottom:20px;font-size:15.5px;max-width:680px;margin-left:auto;margin-right:auto;}
+.body p.lead{font-size:16.5px;}
+.body .serif{font-weight:600;}
+.body h2{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:21px;letter-spacing:.06em;margin:44px 0 16px;border-left:3px solid var(--accent);padding-left:14px;max-width:680px;margin-left:auto;margin-right:auto;}
+.fig{max-width:900px;margin:36px auto;text-align:center;}
+.fig img{width:100%;height:auto;display:block;border:1px solid var(--line);}
+.fig figcaption{margin-top:10px;font-size:12.5px;color:var(--ink-soft);letter-spacing:.05em;}
+.fig-grid{max-width:900px;margin:36px auto;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.fig-grid img{width:100%;height:auto;display:block;border:1px solid var(--line);}
+.fig-grid figcaption{grid-column:1/-1;text-align:center;margin-top:8px;font-size:12.5px;color:var(--ink-soft);letter-spacing:.05em;}
+.quote{max-width:680px;margin:30px auto;padding:20px 26px;border-left:3px solid var(--ink);background:#F2F0EB;font-size:14.5px;color:var(--ink-soft);}
+.quote .who{display:block;margin-top:10px;font-family:"Noto Serif SC",serif;font-weight:600;color:var(--ink);font-size:13px;letter-spacing:.06em;}
+.info-block{max-width:680px;margin:26px auto;font-size:15px;}
+.info-block .row{display:flex;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line);}
+.info-block .row b{flex:0 0 130px;font-weight:500;color:var(--ink-soft);}
+.info-block .row span{flex:1;}
+
+.footer{border-top:1px solid var(--line);background:#F4F2ED;margin-top:70px;}
+.footer-inner{max-width:1200px;margin:0 auto;padding:36px 28px 44px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer .name{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:16px;}
+.footer .mail{color:var(--ink-soft);text-decoration:none;font-size:14px;}
+.footer .mail:hover{color:var(--accent);}
+.footer .back a{color:var(--ink-soft);text-decoration:none;font-size:13.5px;}
+.footer .back a:hover{color:var(--accent);}
+
+@media (max-width:760px){
+  .head{padding:120px 20px 0;}
+  .body{padding:40px 20px 20px;}
+  .nav-inner{padding:12px 20px;}
+  .footer-inner{padding:30px 20px 38px;}
+  .head .meta{font-size:12.5px;gap:8px 18px;}
+  .fig-grid{grid-template-columns:1fr;}
+  .info-block .row{flex-direction:column;gap:4px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Minglu Zhong</a>
+    <div class="nav-links">
+      <a href="index.html">作品</a>
+      <a href="about.html">关于</a>
+    </div>
+  </div>
+</nav>
+
+<header class="head">
+  <span class="num">PROJECT 04 · PROGRAM</span>
+  <p class="sub-of">The Interconnections 子项目 — 开幕表演</p>
+  <h1>“Serene Flow”<span class="zh-title">《静流》· 音乐与舞蹈表演</span></h1>
+  <div class="meta">
+    <span><b>时间</b> 2024 年 10 月 10 日（周六）4–7 pm</span>
+    <span><b>地点</b> MAXgallery, Baltimore</span>
+  </div>
+</header>
+<hr class="rule">
+
+<main class="body">
+  <p class="lead">为 The Interconnections 展览的特别开幕，我们创作了一段融合节奏与编排的独特作品。表演包含两个段落：五位才华横溢的音乐家带来的现场氛围与电子音乐，以及三位舞者的现代舞作品——鼓励身体与心灵的共同参与。表演之后，艺术家 Frey Su 将分享她进入冥想的旅程，策展人 Minglu Zhong 则与观众探讨这场沉浸体验背后的概念。活动面向全年龄，免费、适合家庭，提供新鲜的艺术体验与互动元素。</p>
+
+  <figure class="fig">
+    <img src="assets/sereneflow-01.jpg" alt="三位白衣舞者的黑白表演照片，姿态富有张力">
+    <figcaption>“Serene Flow” — 舞者在装置间起舞</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="assets/sereneflow-02.jpg" alt="粉衣舞者在紫蓝渐变光影中起舞">
+    <figcaption>光影中的舞者 — 紫蓝渐变的舞台氛围</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="assets/sereneflow-03.jpg" alt="白衣人物躺卧在反光银质表面">
+    <figcaption>冥想时刻 — 身体与反射表面</figcaption>
+  </figure>
+
+  <h2>表演团队</h2>
+  <div class="info-block">
+    <div class="row"><b>作曲</b><span>Junyang (Jim) Li</span></div>
+    <div class="row"><b>音乐统筹</b><span>Zizhan (Max) Wu</span></div>
+    <div class="row"><b>键盘</b><span>Junlin Li</span></div>
+    <div class="row"><b>贝斯</b><span>Yizhen (Zoe) Lyu</span></div>
+    <div class="row"><b>电子乐</b><span>André DeGrenier</span></div>
+    <div class="row"><b>舞者</b><span>Hebe Wang · Angelina Mille · Nat Scott</span></div>
+  </div>
+
+  <h2>“Serene Flow”——aSway（4:30–4:45）</h2>
+  <p>这首作品的作曲家 Junyang (Jim) Li 分享道：“我想与艺术家对精神流动与冥想能量的表达相连接，释放焦虑与压力，拥抱真实的自我。焦点只在于当下时刻、我们内在的流动与感知。”这是 Frey 艺术作品的音乐合成，创造出充满内省能量的广阔冥想空间，引导自我再发现与超越体验。Jim 与 Max 在环绕声环境中以环境音打造和谐的宇宙音景。Zizhan (Max) Wu 阐述道：“当音乐像一场冥想那样缓慢有机地展开，观众沉浸于内在能量与自我发现的空间，表演者则通过自由即兴加入这段旅程，引导他们走向最终的超越。”</p>
+
+  <h2>“Serene Flow”——aRouse（4:45–5:00）</h2>
+  <p>这段编舞邀请观众逃离日常生活的需求，重新夺回一段个人反思的时光。置身于装置之间，每位舞者体现一种独特品质，以锐利的几何母题建立新的联结，通过动作传达这些品质的集体力量。编舞 Hebe Wang 描述道：“与 Frey 的作品相呼应，我们的表演探索精、气、神和谐相聚，旨在淹没见证者的灵魂、服务于观众。”她补充道：“我们鼓励观众随心所欲地与表演者互动，加入我们的呼吸练习与冥想。”</p>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="name">Minglu Zhong 钟明璐</span>
+    <a class="mail" href="mailto:Muke_Zhong@163.com">Muke_Zhong@163.com</a>
+    <span class="back"><a href="index.html">返回首页 ↑</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

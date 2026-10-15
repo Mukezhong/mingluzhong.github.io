@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Just A Drop — Minglu Zhong</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2317181A'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='40' fill='%23FAF9F7' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+:root{--paper:#FAF9F7;--ink:#17181A;--ink-soft:#55565B;--line:#E2DFD8;--line-strong:#C9C5BC;--accent:#254358;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans SC",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;font-weight:300;line-height:1.9;-webkit-font-smoothing:antialiased;}
+.serif{font-family:"Noto Serif SC",Georgia,"Songti SC",serif;}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(250,249,247,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:19px;letter-spacing:.02em;color:var(--ink);text-decoration:none;}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{color:var(--ink-soft);text-decoration:none;font-size:14px;letter-spacing:.06em;transition:color .2s;}
+.nav-links a:hover{color:var(--accent);}
+
+.head{padding:150px 28px 0;text-align:center;}
+.head .num{font-family:Georgia,serif;font-size:13px;letter-spacing:.28em;color:var(--accent);}
+.head h1{font-family:"Noto Serif SC",Georgia,serif;font-weight:900;font-size:clamp(30px,4.6vw,46px);letter-spacing:.03em;margin-top:12px;}
+.head .zh-title{display:block;font-family:"Noto Serif SC",serif;font-weight:600;font-size:17px;color:var(--ink-soft);margin-top:10px;letter-spacing:.1em;}
+.head .meta{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 26px;margin-top:26px;font-size:13.5px;color:var(--ink-soft);letter-spacing:.1em;}
+.head .meta b{color:var(--ink);font-weight:500;}
+.head .support{max-width:720px;margin:26px auto 0;font-size:13px;color:var(--ink-soft);letter-spacing:.04em;line-height:2;}
+.head .support b{color:var(--ink);font-weight:500;}
+.rule{border:none;border-top:1px solid var(--ink);max-width:1200px;margin:40px auto 0;}
+
+.body{max-width:900px;margin:0 auto;padding:48px 28px 30px;}
+.body p{margin-bottom:20px;font-size:15.5px;max-width:680px;margin-left:auto;margin-right:auto;}
+.body p.lead{font-size:16.5px;}
+.body .serif{font-weight:600;}
+.body h2{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:21px;letter-spacing:.06em;margin:44px 0 16px;border-left:3px solid var(--accent);padding-left:14px;max-width:680px;margin-left:auto;margin-right:auto;}
+.fig{max-width:900px;margin:36px auto;text-align:center;}
+.fig img{width:100%;height:auto;display:block;border:1px solid var(--line);}
+.fig figcaption{margin-top:10px;font-size:12.5px;color:var(--ink-soft);letter-spacing:.05em;}
+.info-block{max-width:680px;margin:26px auto;font-size:15px;}
+.info-block .row{display:flex;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line);}
+.info-block .row b{flex:0 0 130px;font-weight:500;color:var(--ink-soft);}
+.info-block .row span{flex:1;}
+.tags{max-width:680px;margin:20px auto 0;text-align:center;}
+.tags span{display:inline-block;border:1px solid var(--line-strong);color:var(--ink-soft);font-size:12.5px;padding:4px 14px;margin:4px;letter-spacing:.08em;}
+
+.footer{border-top:1px solid var(--line);background:#F4F2ED;margin-top:70px;}
+.footer-inner{max-width:1200px;margin:0 auto;padding:36px 28px 44px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer .name{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:16px;}
+.footer .mail{color:var(--ink-soft);text-decoration:none;font-size:14px;}
+.footer .mail:hover{color:var(--accent);}
+.footer .back a{color:var(--ink-soft);text-decoration:none;font-size:13.5px;}
+.footer .back a:hover{color:var(--accent);}
+
+@media (max-width:760px){
+  .head{padding:120px 20px 0;}
+  .body{padding:40px 20px 20px;}
+  .nav-inner{padding:12px 20px;}
+  .footer-inner{padding:30px 20px 38px;}
+  .head .meta{font-size:12.5px;gap:8px 18px;}
+  .info-block .row{flex-direction:column;gap:4px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Minglu Zhong</a>
+    <div class="nav-links">
+      <a href="index.html">作品</a>
+      <a href="about.html">关于</a>
+    </div>
+  </div>
+</nav>
+
+<header class="head">
+  <span class="num">PROJECT 09</span>
+  <h1>Just A Drop<span class="zh-title">《一滴》· 群展策展</span></h1>
+  <div class="meta">
+    <span><b>年份</b> 2023</span>
+    <span><b>类型</b> 展览 · 活动</span>
+    <span><b>角色</b> 艺术家联络 · 策展 · 展览设计 · 平面设计 · 合作拓展</span>
+  </div>
+  <p class="support"><b>支持：</b>The Stanley Mazaroff &amp; Nancy Dorman Endowed Fund for Curatorial Practice · Friends of Curatorial Practice</p>
+</header>
+<hr class="rule">
+
+<main class="body">
+  <p class="lead"><span class="serif">Just a Drop</span> 呈现涵盖广泛媒介的作品，并提供多样公共项目——包括开幕招待、与巴尔的摩讲故事者 Griot Grandmother Edna 的故事会，以及与公益组织 Blue Water Baltimore 的讲座——共同强调水如何塑造我们的日常生活。</p>
+
+  <figure class="fig">
+    <img src="assets/home-06.jpg" alt="Just A Drop 展览现场">
+    <figcaption>Just A Drop — 展览现场</figcaption>
+  </figure>
+
+  <p><span class="serif">Just a Drop</span> 呈现来自巴尔的摩、底特律、华盛顿特区、新不伦瑞克等地 13 位艺术家的作品。展览于 2023 年 2 月 10 日至 3 月 3 日在 MICA 的 Meyerhoff 画廊展出。通过一系列广泛的对象与材料——包括雕塑、插画、抗议横幅、织物、玻璃艺术、视频，以及一幅新委托创作的大型壁画——参展的 13 位艺术家揭示了水如何维系生命、塑造人类命运。</p>
+
+  <p>受 2022 年 9 月西巴尔的摩煮水通告（boil water advisory）的启发，组织本次展览的五位 MICA 学生深入钻研这一最宝贵资源的历史。他们汇聚一群多元的艺术家、活动家与讲故事者，通过文化、仪式与保育来描述人与水的关系。借助个人、集体与神话的意象和故事，参展艺术家邀请观众重新思考这个占我们身体 60%、覆盖地球表面 70% 以上的元素。</p>
+
+  <p>展览以"我们与水的集体关系"为策展核心。<span class="serif">Just a Drop</span> 邀请访客深入潜入我们最宝贵的生命维系资源之中。</p>
+
+  <h2>展览信息</h2>
+  <div class="info-block">
+    <div class="row"><b>展期</b><span>2023 年 2 月 10 日 — 3 月 3 日</span></div>
+    <div class="row"><b>开幕</b><span>2023 年 2 月 10 日（周五）6–8 pm</span></div>
+    <div class="row"><b>地点</b><span>Meyerhoff Gallery, Fox Building, 1303 W. Mount Royal Ave, Baltimore</span></div>
+    <div class="row"><b>策展团队</b><span>Minglu Zhong · jes allie · Vincent Ruffini · Simone Sydnor · Liddy Wells</span></div>
+  </div>
+
+  <h2>参展艺术家</h2>
+  <div class="tags">
+    <span>Oreoluwa Akinyode</span><span>Sunny Choi</span><span>Griot Grandmother Edna</span><span>Avionna Fitzhugh</span><span>Phaan Howng</span><span>Madeleine Maule</span><span>Ọmọlará Williams McCalliste</span><span>Youcef Menasria</span><span>SANO</span><span>Iyosef Melku Tafari</span><span>Talking Dolls</span><span>Dan Smeby</span><span>Erwin Timmers</span>
+  </div>
+
+  <h2>关联项目</h2>
+  <p>Just a Drop 的项目包括：2 月 10 日（周五）的开幕招待与 Griot Grandmother Edna 的现场讲故事表演；以及 2 月 22 日（周三）由本地公益组织 Blue Water Baltimore 带来的线上线下讲座，题为《我们最宝贵资源的历史：人类纪的水域生态》——探讨动物（人类与非人类）在地质时间中如何与这一神秘物质互动。两项项目均免费向公众开放。</p>
+
+  <h2>关于策展实践与 MICA</h2>
+  <p>作为全美首创的此类 MFA 项目，MICA 策展实践专业培养学生扩展策展人的角色，通过替代性的展览制造、机构建设与经由艺术的社会正义模式，更有效地与观众互动。MICA 创立于 1826 年，是全美历史最悠久、持续授予学位的艺术与设计学院。</p>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="name">Minglu Zhong 钟明璐</span>
+    <a class="mail" href="mailto:Muke_Zhong@163.com">Muke_Zhong@163.com</a>
+    <span class="back"><a href="index.html">返回首页 ↑</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

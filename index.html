@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minglu Zhong 钟明璐 — 策展人 · 视觉艺术家</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2317181A'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='40' fill='%23FAF9F7' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+:root{
+  --paper:#FAF9F7;
+  --ink:#17181A;
+  --ink-soft:#55565B;
+  --line:#E2DFD8;
+  --line-strong:#C9C5BC;
+  --accent:#254358;
+  --accent-soft:#3E5A72;
+  --card:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Noto Sans SC",system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+  font-weight:300;
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+}
+.serif{font-family:"Noto Serif SC",Georgia,"Songti SC","SimSun",serif;}
+
+/* ===== 导航 ===== */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:rgba(250,249,247,.96);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(6px);
+}
+.nav-inner{
+  max-width:1200px;margin:0 auto;padding:14px 28px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.nav-logo{
+  font-family:"Noto Serif SC",Georgia,serif;
+  font-weight:700;font-size:19px;letter-spacing:.02em;
+  color:var(--ink);text-decoration:none;
+}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{
+  color:var(--ink-soft);text-decoration:none;
+  font-size:14px;letter-spacing:.06em;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--accent);}
+
+/* ===== Hero ===== */
+.hero{
+  max-width:1200px;margin:0 auto;
+  padding:150px 28px 70px;
+  text-align:center;
+}
+.hero h1{
+  font-family:"Noto Serif SC",Georgia,serif;
+  font-weight:900;font-size:clamp(44px,7vw,84px);
+  letter-spacing:.04em;line-height:1.15;
+}
+.hero .name-en{
+  display:block;
+  font-family:"Noto Serif SC",Georgia,serif;
+  font-weight:600;font-size:clamp(20px,2.6vw,30px);
+  color:var(--accent);letter-spacing:.18em;
+  margin-top:14px;
+}
+.hero .roles{
+  margin-top:26px;color:var(--ink-soft);
+  font-size:16px;letter-spacing:.22em;
+}
+.hero .tagline{
+  max-width:640px;margin:26px auto 0;
+  font-size:16px;color:var(--ink);
+}
+.hero .tagline .serif{font-weight:600;}
+
+/* ===== 项目网格 ===== */
+.works{
+  max-width:1200px;margin:0 auto;
+  padding:20px 28px 100px;
+}
+.section-head{
+  display:flex;align-items:baseline;justify-content:space-between;
+  border-top:1px solid var(--ink);
+  padding-top:22px;margin-bottom:42px;
+}
+.section-head h2{
+  font-family:"Noto Serif SC",Georgia,serif;
+  font-weight:700;font-size:26px;letter-spacing:.1em;
+}
+.section-head .en{
+  color:var(--ink-soft);font-size:13px;letter-spacing:.3em;text-transform:uppercase;
+}
+.grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:34px 26px;
+}
+.card{
+  display:block;text-decoration:none;color:var(--ink);
+  border:1px solid var(--line);
+  background:var(--card);
+  transition:border-color .25s, box-shadow .25s;
+}
+.card:hover{border-color:var(--line-strong);box-shadow:0 10px 30px rgba(23,24,26,.06);}
+.card-media{
+  position:relative;aspect-ratio:3/2;overflow:hidden;background:#ECEAE6;
+}
+.card-media img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .6s cubic-bezier(.22,.61,.36,1);
+}
+.card:hover .card-media img{transform:scale(1.03);}
+.card-num{
+  position:absolute;top:12px;left:12px;
+  font-family:Georgia,serif;font-size:12px;letter-spacing:.1em;
+  color:var(--ink);background:rgba(250,249,247,.9);
+  padding:3px 9px;border:1px solid var(--line);
+}
+.card-body{padding:18px 20px 20px;}
+.card-body h3{
+  font-family:"Noto Serif SC",Georgia,serif;
+  font-weight:700;font-size:19px;line-height:1.35;
+}
+.card-body .zh{display:block;font-size:13.5px;color:var(--ink-soft);font-weight:400;margin-top:5px;}
+.card-meta{
+  margin-top:12px;font-size:12.5px;color:var(--accent);
+  letter-spacing:.08em;
+  display:flex;align-items:center;gap:10px;
+}
+.card-meta .dot{color:var(--line-strong);}
+
+/* About 卡片特殊样式 */
+.card.about .card-media{
+  background:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+}
+.card.about .monogram{
+  font-family:"Noto Serif SC",Georgia,serif;font-weight:900;
+  font-size:72px;color:var(--paper);
+}
+
+/* ===== 页脚 ===== */
+.footer{
+  border-top:1px solid var(--line);
+  background:#F4F2ED;
+}
+.footer-inner{
+  max-width:1200px;margin:0 auto;padding:44px 28px 50px;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:18px;
+}
+.footer .name{
+  font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:17px;
+}
+.footer .mail{color:var(--ink-soft);text-decoration:none;font-size:14px;}
+.footer .mail:hover{color:var(--accent);}
+.footer .back a{
+  color:var(--ink-soft);text-decoration:none;font-size:13.5px;letter-spacing:.08em;
+}
+.footer .back a:hover{color:var(--accent);}
+.footer .copy{flex-basis:100%;font-size:12px;color:var(--ink-soft);letter-spacing:.06em;}
+
+@media (max-width:760px){
+  .hero{padding:120px 20px 56px;}
+  .hero .roles{font-size:14px;letter-spacing:.14em;}
+  .works{padding:16px 20px 80px;}
+  .grid{grid-template-columns:1fr;gap:26px;}
+  .section-head h2{font-size:22px;}
+  .footer-inner{padding:36px 20px 42px;}
+  .nav-inner{padding:12px 20px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Minglu Zhong</a>
+    <div class="nav-links">
+      <a href="index.html">作品</a>
+      <a href="about.html">关于</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>钟明璐<span class="name-en">Minglu Zhong</span></h1>
+  <p class="roles">策展人 · 视觉艺术家 · 交互体验创作者</p>
+  <p class="tagline"><span class="serif">以视觉与策展连接当代艺术与全球文化</span><br>从展览、公共活动到互动艺术创作，跨越传统与数字媒介，让观看成为可参与的体验。</p>
+</header>
+
+<main class="works">
+  <div class="section-head">
+    <h2>作品与项目</h2>
+    <span class="en">Selected Works &amp; Programs</span>
+  </div>
+
+  <div class="grid">
+
+    <a class="card" href="where-the-world-gathers.html">
+      <div class="card-media">
+        <span class="card-num">01</span>
+        <img src="assets/home-01.jpg" alt="Where the World Gathers 互动游戏现场">
+      </div>
+      <div class="card-body">
+        <h3>Where the World Gathers<span class="zh">《世界汇聚之地》· 互动艺术游戏</span></h3>
+        <div class="card-meta"><span>2025</span><span class="dot">·</span><span>交互设计 · 游戏</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="drawing-25.html">
+      <div class="card-media">
+        <span class="card-num">02</span>
+        <img src="assets/drawing25-03.jpg" alt="Drawing 25 集体绘画活动现场">
+      </div>
+      <div class="card-body">
+        <h3>Drawing 25<span class="zh">《绘画25》· 公共艺术游戏</span></h3>
+        <div class="card-meta"><span>2025</span><span class="dot">·</span><span>游戏设计 · 公共活动</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="your-pixel-echo.html">
+      <div class="card-media">
+        <span class="card-num">03</span>
+        <img src="assets/home-03.jpg" alt="Your Pixel Echo 展览现场">
+      </div>
+      <div class="card-body">
+        <h3>Your Pixel Echo<span class="zh">《你的像素回声》· 群展策展</span></h3>
+        <div class="card-meta"><span>2024</span><span class="dot">·</span><span>展览 · 策展</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="the-interconnection.html">
+      <div class="card-media">
+        <span class="card-num">04</span>
+        <img src="assets/home-04.jpg" alt="The Interconnections 展览现场">
+      </div>
+      <div class="card-body">
+        <h3>The Interconnections<span class="zh">《互联》· 沉浸式展览策展</span></h3>
+        <div class="card-meta"><span>2024</span><span class="dot">·</span><span>展览 · 策展</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="serene-flow.html">
+      <div class="card-media">
+        <span class="card-num">05</span>
+        <img src="assets/sereneflow-01.jpg" alt="Serene Flow 表演现场">
+      </div>
+      <div class="card-body">
+        <h3>“Serene Flow”<span class="zh">《静流》· 开幕表演策划</span></h3>
+        <div class="card-meta"><span>2024</span><span class="dot">·</span><span>音乐 · 舞蹈表演</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="inter-asian-cultural-expo.html">
+      <div class="card-media">
+        <span class="card-num">06</span>
+        <img src="assets/expo-01.jpg" alt="Inter-Asian Cultural Expo 活动现场">
+      </div>
+      <div class="card-body">
+        <h3>Inter-Asian Cultural Expo<span class="zh">跨亚洲文化博览会</span></h3>
+        <div class="card-meta"><span>2024</span><span class="dot">·</span><span>市集 · 展演活动</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="displacement.html">
+      <div class="card-media">
+        <span class="card-num">07</span>
+        <img src="assets/displacement-01.jpg" alt="(dis)placement 座谈现场">
+      </div>
+      <div class="card-body">
+        <h3>(dis)placement<span class="zh">《失位》· 闭幕座谈</span></h3>
+        <div class="card-meta"><span>2024</span><span class="dot">·</span><span>圆桌座谈 · 学术对话</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="from-the-balcony.html">
+      <div class="card-media">
+        <span class="card-num">08</span>
+        <img src="assets/home-05.jpg" alt="From the Balcony 展览现场">
+      </div>
+      <div class="card-body">
+        <h3>From the Balcony<span class="zh">《来自阳台》· 个展策展</span></h3>
+        <div class="card-meta"><span>2024–2025</span><span class="dot">·</span><span>展览 · 策展</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="just-a-drop.html">
+      <div class="card-media">
+        <span class="card-num">09</span>
+        <img src="assets/home-06.jpg" alt="Just A Drop 展览现场">
+      </div>
+      <div class="card-body">
+        <h3>Just A Drop<span class="zh">《一滴》· 群展策展</span></h3>
+        <div class="card-meta"><span>2023</span><span class="dot">·</span><span>展览 · 策展</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="phantom-images-on-the-ruins.html">
+      <div class="card-media">
+        <span class="card-num">10</span>
+        <img src="assets/phantom-01.png" alt="Phantom Images on the Ruins 装置作品">
+      </div>
+      <div class="card-body">
+        <h3>Phantom Images on the Ruins<span class="zh">《废墟上的幻影图像》· 装置艺术</span></h3>
+        <div class="card-meta"><span>2024</span><span class="dot">·</span><span>个人创作 · 装置</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="from-niche-to-mainstream.html">
+      <div class="card-media">
+        <span class="card-num">11</span>
+        <img src="assets/niche-01.jpg" alt="From Niche to Mainstream 讲座现场">
+      </div>
+      <div class="card-body">
+        <h3>From Niche to Mainstream<span class="zh">《从亚文化到主流》· 学术讲座</span></h3>
+        <div class="card-meta"><span>2023</span><span class="dot">·</span><span>讲座 · 放映</span></div>
+      </div>
+    </a>
+
+    <a class="card about" href="about.html">
+      <div class="card-media">
+        <span class="card-num" style="color:var(--paper);border-color:rgba(250,249,247,.35);background:rgba(23,24,26,.55);">12</span>
+        <span class="monogram">M</span>
+      </div>
+      <div class="card-body">
+        <h3>关于我<span class="zh">About Minglu Zhong</span></h3>
+        <div class="card-meta"><span>教育背景</span><span class="dot">·</span><span>经历与联系方式</span></div>
+      </div>
+    </a>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="name">Minglu Zhong 钟明璐</span>
+    <a class="mail" href="mailto:Muke_Zhong@163.com">Muke_Zhong@163.com</a>
+    <span class="back"><a href="index.html">返回首页 ↑</a></span>
+    <span class="copy">Curator · Visual Artist · Experience Creator — Selected Works &amp; Programs</span>
+  </div>
+</footer>
+
+</body>
+</html>

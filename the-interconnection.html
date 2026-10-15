@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Interconnections — Minglu Zhong</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2317181A'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='40' fill='%23FAF9F7' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+:root{--paper:#FAF9F7;--ink:#17181A;--ink-soft:#55565B;--line:#E2DFD8;--line-strong:#C9C5BC;--accent:#254358;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans SC",system-ui,"PingFang SC","Microsoft YaHei",sans-serif;font-weight:300;line-height:1.9;-webkit-font-smoothing:antialiased;}
+.serif{font-family:"Noto Serif SC",Georgia,"Songti SC",serif;}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(250,249,247,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:19px;letter-spacing:.02em;color:var(--ink);text-decoration:none;}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{color:var(--ink-soft);text-decoration:none;font-size:14px;letter-spacing:.06em;transition:color .2s;}
+.nav-links a:hover{color:var(--accent);}
+
+.head{padding:150px 28px 0;text-align:center;}
+.head .num{font-family:Georgia,serif;font-size:13px;letter-spacing:.28em;color:var(--accent);}
+.head h1{font-family:"Noto Serif SC",Georgia,serif;font-weight:900;font-size:clamp(30px,4.6vw,46px);letter-spacing:.03em;margin-top:12px;}
+.head .zh-title{display:block;font-family:"Noto Serif SC",serif;font-weight:600;font-size:17px;color:var(--ink-soft);margin-top:10px;letter-spacing:.1em;}
+.head .meta{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 26px;margin-top:26px;font-size:13.5px;color:var(--ink-soft);letter-spacing:.1em;}
+.head .meta b{color:var(--ink);font-weight:500;}
+.head .support{max-width:720px;margin:26px auto 0;font-size:13px;color:var(--ink-soft);letter-spacing:.04em;line-height:2;}
+.head .support b{color:var(--ink);font-weight:500;}
+.rule{border:none;border-top:1px solid var(--ink);max-width:1200px;margin:40px auto 0;}
+
+.body{max-width:900px;margin:0 auto;padding:48px 28px 30px;}
+.body p{margin-bottom:20px;font-size:15.5px;max-width:680px;margin-left:auto;margin-right:auto;}
+.body p.lead{font-size:16.5px;}
+.body .serif{font-weight:600;}
+.body h2{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:21px;letter-spacing:.06em;margin:44px 0 16px;border-left:3px solid var(--accent);padding-left:14px;max-width:680px;margin-left:auto;margin-right:auto;}
+.fig{max-width:900px;margin:36px auto;text-align:center;}
+.fig img{width:100%;height:auto;display:block;border:1px solid var(--line);}
+.fig figcaption{margin-top:10px;font-size:12.5px;color:var(--ink-soft);letter-spacing:.05em;}
+.fig-grid{max-width:900px;margin:36px auto;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.fig-grid img{width:100%;height:auto;display:block;border:1px solid var(--line);}
+.fig-grid figcaption{grid-column:1/-1;text-align:center;margin-top:8px;font-size:12.5px;color:var(--ink-soft);letter-spacing:.05em;}
+.info-block{max-width:680px;margin:26px auto;font-size:15px;}
+.info-block .row{display:flex;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line);}
+.info-block .row b{flex:0 0 110px;font-weight:500;color:var(--ink-soft);}
+.info-block .row span{flex:1;}
+
+.footer{border-top:1px solid var(--line);background:#F4F2ED;margin-top:70px;}
+.footer-inner{max-width:1200px;margin:0 auto;padding:36px 28px 44px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer .name{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;font-size:16px;}
+.footer .mail{color:var(--ink-soft);text-decoration:none;font-size:14px;}
+.footer .mail:hover{color:var(--accent);}
+.footer .back a{color:var(--ink-soft);text-decoration:none;font-size:13.5px;}
+.footer .back a:hover{color:var(--accent);}
+
+@media (max-width:760px){
+  .head{padding:120px 20px 0;}
+  .body{padding:40px 20px 20px;}
+  .nav-inner{padding:12px 20px;}
+  .footer-inner{padding:30px 20px 38px;}
+  .head .meta{font-size:12.5px;gap:8px 18px;}
+  .fig-grid{grid-template-columns:1fr;}
+  .info-block .row{flex-direction:column;gap:4px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Minglu Zhong</a>
+    <div class="nav-links">
+      <a href="index.html">作品</a>
+      <a href="about.html">关于</a>
+    </div>
+  </div>
+</nav>
+
+<header class="head">
+  <span class="num">PROJECT 04</span>
+  <h1>The Interconnections<span class="zh-title">《互联》· 沉浸式展览策展</span></h1>
+  <div class="meta">
+    <span><b>年份</b> 2024</span>
+    <span><b>类型</b> 展览 · 活动</span>
+    <span><b>角色</b> 策展 · 展览设计 · 平面设计 · 活动策划 · 摄影</span>
+  </div>
+  <p class="support"><b>支持：</b>Maxine Taylor · 巴尔的摩推广与艺术办公室（BOPA）Free Fall Baltimore 基金 · MICA 中国学生学者联合会（CSSA）</p>
+</header>
+<hr class="rule">
+
+<main class="body">
+  <p class="lead"><span class="serif">The Interconnections</span> 是一场唤起冥想精神本质的互动体验。MAXgallery 与艺术家 <span class="serif">Frey (Hongyao) Su</span>、策展人 <span class="serif">Minglu Zhong</span> 很荣幸呈现这场展览。</p>
+
+  <figure class="fig">
+    <img src="assets/interconnection-01.png" alt="The Interconnections 沉浸式光影体验现场，三位白衣人物冥想">
+    <figcaption>The Interconnections — 沉浸式光影冥想体验</figcaption>
+  </figure>
+
+  <p>展览呈现艺术家 Frey Su 经由多媒体装置进行的跨学科表达，融合传统绘画、雕塑、灯光与声音。通过容纳六件作品，展览将拓展房间的边界，将其转化为一场沉浸式冥想。这些作品共同代表了五种微观感知及其与精神提升、觉知的关系，在宏观层面命名个体的"精、气、神"。作品以类似轨道的布局排列，漂浮在不断变化、无垠的光之中，包裹着一个从中央空间延伸至天空的、普遍的、无边界的内核。</p>
+
+  <p>在流动的引导下，访客将成为艺术作品的一部分——可以躺在地上或自由探索，从一个超越自身的视角体验身体与精神的近乎全能、自然的协同。反射表面映照出极光、你与我，扩展为一个充盈着超越与冥想动态的隐秘领域。</p>
+
+  <figure class="fig">
+    <img src="assets/interconnection-02.jpg" alt="悬挂的椭圆装置，红黄绿渐变纹理">
+    <figcaption>悬挂装置 — 山峦般的渐变纹理</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="assets/interconnection-03.jpg" alt="紫色调环境中的人物与圆形光影">
+    <figcaption>光影中的访客 — 人与装置融为一体</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="assets/interconnection-04.jpg" alt="蓝绿色光影中高举双手的人物">
+    <figcaption>沉浸时刻 — 身体与光影的对话</figcaption>
+  </figure>
+
+  <p><span class="serif">The Interconnections</span> 包含由 MICA 艺术社区与 JHU Peabody 音乐家、舞者共同开发的协作项目，以特别活动充实展览。这些活动面向家庭友好，提供新鲜的艺术体验与互动元素，为人们提供缓解压力、促进健康的喘息空间。它们邀请每个人停下来、呼吸，与当下重新连接。这些元素共同创造沉浸、静谧的冥想空间，引导参与者踏上内省之旅，鼓励亲密的人际冥想体验。</p>
+
+  <h2>展览信息</h2>
+  <div class="info-block">
+    <div class="row"><b>展期</b><span>2024 年 10 月 5 日 — 11 月 1 日</span></div>
+    <div class="row"><b>开幕</b><span>2024 年 10 月 10 日（周六）4–7 pm</span></div>
+    <div class="row"><b>地点</b><span>MAXgallery, 126 North Madiera Street, Baltimore</span></div>
+    <div class="row"><b>艺术家</b><span>Frey (Hongyao) Su</span></div>
+    <div class="row"><b>策展人</b><span>Minglu Zhong</span></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="name">Minglu Zhong 钟明璐</span>
+    <a class="mail" href="mailto:Muke_Zhong@163.com">Muke_Zhong@163.com</a>
+    <span class="back"><a href="index.html">返回首页 ↑</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
